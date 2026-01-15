@@ -1,0 +1,16 @@
+# Core data & ML
+numpy
+pandas
+scikit-learn
+joblib
+
+# RAG & vector store
+chromadb
+langchain
+langchain-chroma
+langchain-huggingface
+sentence-transformers
+
+# Utilities
+requests
+tqdm
