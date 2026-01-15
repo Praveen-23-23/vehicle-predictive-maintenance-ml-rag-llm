@@ -2,26 +2,26 @@
 
 ## 📌 Project Overview
 
-This project implements an intelligent vehicle predictive maintenance system that combines:
+This project implements an intelligent **vehicle predictive maintenance system** that combines:
 
-- Machine Learning (Random Forest) for failure probability prediction
-- Retrieval-Augmented Generation (RAG) for domain knowledge grounding
-- Large Language Models (LLM) for contextual risk interpretation and explanation
+- **Machine Learning (Random Forest)** for failure probability prediction  
+- **Retrieval-Augmented Generation (RAG)** for maintenance knowledge grounding  
+- **Large Language Models (LLM)** for contextual risk interpretation and explanation  
 
-The system is fully data-driven, non-rule-based, and designed to reflect real-world predictive maintenance workflows.
+The system is **fully data-driven**, **non-rule-based**, and designed to reflect **real-world predictive maintenance workflows**.
 
 ---
 
 ## 🎯 Problem Statement
 
 In vehicle and industrial systems, failures are rare but costly.  
-Traditional rule-based systems struggle to capture complex interactions between sensor variables.
+Traditional rule-based systems struggle to capture complex interactions between sensor variables and often produce brittle decisions.
 
 This project aims to:
-- Predict failure probability from historical sensor data
-- Interpret risk contextually (no fixed thresholds)
-- Generate human-readable maintenance explanations
-- Avoid hard-coded rules entirely
+- Predict **failure probability** from historical sensor data  
+- Interpret risk **contextually** (without fixed thresholds)  
+- Generate **human-readable maintenance explanations**  
+- Avoid **hard-coded rules** entirely  
 
 ---
 
@@ -39,6 +39,7 @@ RAG (Maintenance Knowledge Base)
 LLM Reasoning Engine
         ↓
 Risk Level (LOW / MEDIUM / HIGH)
+
 🔍 Key Design Principles
 ❌ No rule-based thresholds (e.g., no “if torque > X”)
 
@@ -48,7 +49,7 @@ Risk Level (LOW / MEDIUM / HIGH)
 
 ✅ Knowledge grounding via RAG
 
-✅ Hardware-aware design
+✅ Hardware-aware system design
 
 📂 Project Structure
 vehicle_failure_prediction/
@@ -70,7 +71,7 @@ vehicle_failure_prediction/
 📊 Dataset
 Predictive maintenance sensor dataset
 
-Features include:
+Key features:
 
 Air temperature [K]
 
@@ -82,7 +83,7 @@ Torque [Nm]
 
 Tool wear [min]
 
-Target: Machine failure (rare event)
+Target variable: Machine failure (rare event)
 
 The dataset is naturally imbalanced, reflecting real operational conditions.
 
@@ -91,11 +92,11 @@ Random Forest predicts failure probability
 
 RAG retrieves relevant maintenance knowledge
 
-LLM interprets probability + context
+LLM interprets probability and sensor context
 
-Final risk and explanation are generated
+Final risk level and explanation are generated
 
-No hard thresholds are used.
+No fixed thresholds are used at any stage.
 
 🧪 Example Output
 FINAL RISK: MEDIUM
@@ -104,7 +105,7 @@ FINAL EXPLANATION:
 The failure probability suggests an elevated risk compared to normal operation.
 While no immediate failure is indicated, the combination of increased tool wear
 and thermal stress may accelerate component degradation. Preventive inspection
-is recommended.
+is recommended to avoid escalation.
 🚀 How to Run
 Install dependencies
 pip install -r requirements.txt
@@ -132,13 +133,13 @@ In production, LLM explanations are typically on-demand or API-based
 📈 Future Improvements
 Time-series degradation modeling
 
-Batch reporting
+Batch reporting and analytics
 
-FastAPI backend
+FastAPI backend for deployment
 
-Streamlit dashboard
+Streamlit-based dashboard
 
-Confidence visualization
+Confidence and uncertainty visualization
 
 🧠 Key Takeaway
-This project demonstrates how Machine Learning, Retrieval-Augmented Generation, and Large Language Models can work together to produce explainable, non-rule-based predictive maintenance decisions.
+This project demonstrates how Machine Learning, Retrieval-Augmented Generation, and Large Language Models can work together to produce explainable, non-rule-based predictive maintenance decisions aligned with real industrial systems.
